@@ -6,7 +6,7 @@ package com.mycompany.app;
  */
 public class App 
 {
-    private App() {}
+    private App() { }
 
     public static void main(final String[] args)
     {
