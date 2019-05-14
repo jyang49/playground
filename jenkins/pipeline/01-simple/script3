@@ -35,6 +35,9 @@ pipeline {
   post {
     always {
       echo "always executed"
+      mail to: "jason_yang490@yahoo.com",
+           subject: "testing email from Jenkins",
+           body: "mail body"
     }
     success {
       echo "executed when success"
