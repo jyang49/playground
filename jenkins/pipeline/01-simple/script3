@@ -1,10 +1,16 @@
 pipeline {
   agent any 
+
   options {
     buildDiscarder(logRotator(numToKeepStr: '12'))
     timestamps() 
     retry(2)
   }
+
+  parameters {
+    string(name: 'hobby', description: 'favorite hobby', defaultValue: 'reading')
+  }
+
   stages {
     stage('Build') { 
       steps {
