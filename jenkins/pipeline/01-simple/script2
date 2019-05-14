@@ -1,0 +1,10 @@
+pipeline {
+    node {
+        stage('stage 1') {
+            sh label: '', script: 'echo "Grace" > /tmp/wife.txt'
+        }
+        stage('stage 2') {
+            sh label: '', script: 'echo "my love" >> /tmp/wife.txt'
+        }
+    }
+}
