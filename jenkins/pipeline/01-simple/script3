@@ -1,8 +1,9 @@
 pipeline {
   agent any 
   options {
-    buildDiscarder(logRotator(numToKeepStr: '4'))
+    buildDiscarder(logRotator(numToKeepStr: '12'))
     timestamps() 
+    retry(2)
   }
   stages {
     stage('Build') { 
@@ -14,6 +15,7 @@ pipeline {
     stage('Test') { 
       steps {
         echo "test 1"
+        error "fail the test"
         echo "test 2"
       }
     }
