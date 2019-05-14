@@ -26,4 +26,15 @@ pipeline {
       }
     }
   }
+  post {
+    always {
+      echo "always executed"
+    }
+    success {
+      echo "executed when success"
+    }
+    failure {
+      echo "executed when failed"
+    }
+  }
 }
