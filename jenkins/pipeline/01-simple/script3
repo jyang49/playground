@@ -8,20 +8,19 @@ pipeline {
       steps {
         echo "build 1"
         echo "build 2"
+      }
     }
-  }
-  stages {
     stage('Test') { 
       steps {
         echo "test 1"
         echo "test 2"
+      }
     }
-  }
-  stages {
     stage('Deploy') { 
       steps {
         echo "deploy 1"
         echo "deploy 2"
+      }
     }
   }
 }
