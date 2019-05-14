@@ -24,16 +24,16 @@ pipeline {
             echo "CHANGED is run second"
         }
         aborted {
-          echo "SUCCESS, FAILURE, UNSTABLE, or ABORTED are exclusive of each other"
+          echo "ABORTED"
         }
         success {
-            echo "SUCCESS, FAILURE, UNSTABLE, or ABORTED runs last"
+            echo "SUCCESS"
         }
         unstable {
-          echo "SUCCESS, FAILURE, UNSTABLE, or ABORTED runs last"
+          echo "UNSTABLE"
         }
         failure {
-            echo "SUCCESS, FAILURE, UNSTABLE, or ABORTED runs last"
+            echo "FAILURE"
         }
     }
 }
