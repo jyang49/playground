@@ -1,0 +1,9 @@
+node {
+    stage('stage 1') {
+        sh label: '', script: 'echo "study" > /tmp/hobby.txt'
+    }
+    stage('stage 2') {
+        sh label: '', script: 'echo "study more" >> /tmp/hobby.txt'
+    }
+}
+
