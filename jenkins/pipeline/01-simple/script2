@@ -1,11 +1,10 @@
 pipeline {
     agent any
-    stages {
-        stage('stage 1') {
-            sh label: '', script: 'echo "Grace" > /tmp/wife.txt'
-        }
-        stage('stage 2') {
-            sh label: '', script: 'echo "my love" >> /tmp/wife.txt'
+    stages { 
+        stage('Example') {
+            steps {
+                echo 'Hello World'
+            }
         }
     }
 }
