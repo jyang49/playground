@@ -15,8 +15,8 @@ pipeline {
     stage('Test') { 
       steps {
         echo "test 1"
-        error "fail the test"
-        echo "test 2"
+        // error "fail the test"
+        echo("test 2") // function format with ()
       }
     }
     stage('Deploy') { 
