@@ -1,5 +1,5 @@
 pipeline {
-    agent
+    agent any
     node {
         stage('stage 1') {
             sh label: '', script: 'echo "Grace" > /tmp/wife.txt'
